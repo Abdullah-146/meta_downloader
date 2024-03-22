@@ -1,0 +1,63 @@
+/* make font family professional looking something like poppin or urbanist */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+* {
+    font-family: 'Urbanist', sans-serif;
+}
+
+        body {
+            background-color: #1a1a1a; /* Dark background color */
+            color: #ffffff; /* Text color */
+            /* font-family: 'Arial', sans-serif; */
+
+
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #333333; /* Form background color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            /* border: 1px solid #ffffff;  */
+            /* Border color for text input and submit button */
+            box-sizing: border-box;
+            border-radius: 4px;
+            background-color: #1a1a1a; /* Input background color */
+            color: #ffffff; /* Input text color */
+        }
+        /* text field outline hidden */
+        input[type="text"]:focus {
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #4caf50; /* Submit button background color */
+            color: #ffffff; /* Submit button text color */
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Submit button hover background color */
+        }
+
+        .loader {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .status {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }

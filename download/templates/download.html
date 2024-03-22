@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="static/style.css"> 
+    
+</head>
+
+<body class="h-screen flex flex-col items-center justify-center">
+    <form method="post" onsubmit="showLoader()">
+        <!-- text saying video downloader -->
+        <h1 class="text-center py-4 text-4xl font-bold mb-4 text-white-500">Downloadify</h1>
+        {% csrf_token %}
+        <input type="text" name="url" placeholder="Enter the video to download" autocomplete="off">
+        <input type="submit" value="Download">
+        <!-- radio button to select quality -->
+        <div class="flex gap-6 justify-center items-center mt-4">
+            <div>
+                <input type="radio" name="quality" value="720" id="720p" checked>
+                <label for="720p">720p</label>
+            </div>
+            <div>
+                <input type="radio" name="quality" value="360" id="360p">
+                <label for="360p">360p</label>
+            </div>
+            </div>
+    </form>
+    <!-- message from backend -->
+     {% if message %}
+     <p class="text-red-500 font-bold text-center mt-4">{{ message }}</p>
+    {% endif %}
+</body>
+
+</html>
